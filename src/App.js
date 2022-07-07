@@ -9,13 +9,13 @@ import {observer} from "mobx-react";
 import ShowMore from "./components/Books/Show-more";
 function App() {
 let tit = GetBooks.title
-    useEffect(()=>{
-        GetBooks.getData()
-    })
+    // useEffect(()=>{
+    //     GetBooks.getData()
+    // })
     return (
         // style={{backgroundImage: `url(${img})` }}
         <div className="App">
-            <h1>Search for books</h1>
+            <h1>Поиск книг</h1>
             <SearchInput/>
             <DropDownList/>
             <DropDownList/>

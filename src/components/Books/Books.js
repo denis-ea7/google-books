@@ -3,7 +3,7 @@ import {observer} from "mobx-react";
 import GetBooks from "../../store/GetBooks";
 const Books = () => {
     const DataTitle = GetBooks.title
-    // console.log(DataTitle)
+    // console.log(GetBooks.getData())
     return (<div className='Books'>
         {DataTitle.map((person) =>
                 <div className='p-3 border bg-light BooksContent' key={person.volumeInfo.id}>

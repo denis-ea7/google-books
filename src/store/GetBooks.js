@@ -5,7 +5,8 @@ import {configure} from "mobx";
 class GetBooks {
     title = []
     img = []
-    startIndex=0
+    startIndex = 0
+    data = ''
 
     constructor() {
         configure({
@@ -14,14 +15,16 @@ class GetBooks {
         })
         makeAutoObservable(this, {
             title: observable,
-            img: observable
+            img: observable,
+            startIndex: observable
         })
     }
 
     getData(data) {
-        axios.get(`https://www.googleapis.com/books/v1/volumes?q=${data}&startindex=${this.startIndex}&key=AIzaSyCJs7EPRmqH2mKVKO31t2NcYnHmkLVfjmA`)
+        axios.get(`https://www.googleapis.com/books/v1/volumes?q=${data}&startIndex=${this.startIndex}&key=AIzaSyCJs7EPRmqH2mKVKO31t2NcYnHmkLVfjmA`)
             .then((res) => {
-               console.log(this.startIndex)
+                this.data = data
+                console.log(this.startIndex)
                 if (this.title.length === 0) {
                     this.title = res.data.items
                 } else {
