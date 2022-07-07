@@ -7,6 +7,7 @@ class GetBooks {
     img = []
     startIndex = 0
     data = ''
+    totalItems=0
 
     constructor() {
         configure({
@@ -21,11 +22,18 @@ class GetBooks {
     }
 
     getData(data) {
-        axios.get(`https://www.googleapis.com/books/v1/volumes?q=${data}&startIndex=${this.startIndex}&key=AIzaSyCJs7EPRmqH2mKVKO31t2NcYnHmkLVfjmA`)
+        if (this.data != data) {
+            this.startIndex = 0;
+            this.title = []
+        }
+        axios.get(`https://www.googleapis.com/books/v1/volumes?q=${data}
+            &startIndex=${this.startIndex}&maxResults=40&
+                key=AIzaSyCJs7EPRmqH2mKVKO31t2NcYnHmkLVfjmA`)
             .then((res) => {
                 this.data = data
                 console.log(this.startIndex)
                 if (this.title.length === 0) {
+                    this.totalItems = res.data.totalItems
                     this.title = res.data.items
                 } else {
                     this.title = this.title.concat(res.data.items)
