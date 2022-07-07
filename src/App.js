@@ -4,9 +4,9 @@ import SearchInput from "./components/SearchInput/SearchInput";
 import DropDownList from "./components/drop-down-list/DropDownList";
 import GetBooks from "./store/GetBooks";
 import {useEffect} from "react";
-import {observer} from "mobx-react";
-import {findAllByDisplayValue} from "@testing-library/react";
 import Books from "./components/Books/Books";
+import {observer} from "mobx-react";
+import ShowMore from "./components/Books/Show-more";
 function App() {
 let tit = GetBooks.title
     useEffect(()=>{
@@ -20,7 +20,8 @@ let tit = GetBooks.title
             <DropDownList/>
             <DropDownList/>
             <Books DataTitle={tit}/>
+            <ShowMore/>
         </div>
     );
 }
-export default  App;
+export default App;
