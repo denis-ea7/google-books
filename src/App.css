@@ -64,6 +64,7 @@ h1 {
     width: 20%;
     border-radius: 4px;
     margin-bottom: 2rem;
+    display: none;
 }
 .show-more:hover{
     opacity: inherit;

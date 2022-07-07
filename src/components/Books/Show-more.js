@@ -9,7 +9,8 @@ const ShowMore = () => {
     }
     return (
         <div>
-            <span onClick={() => countIndex()} className='show-more'>показать еще..</span>
+            <span onClick={() => countIndex()} style={GetBooks.showMore == false ? {} : {display: "block", cursor: "pointer"}}
+                  className='show-more'>показать еще..</span>
         </div>
     );
 };
