@@ -29,6 +29,9 @@ class GetBooks {
         this.title = res.data.items
         this.showMore = true
     }
+    getBook(){
+
+    }
 
     getData(data) {
 
@@ -42,6 +45,7 @@ class GetBooks {
             .then((res) => {
                 this.data = data
                 if (this.title.length === 0) {
+                    console.log(res.data.items[6].id)
                     this.relevanceMethod(res)
                 } else {
                     if (res.data.items.length > 28) {

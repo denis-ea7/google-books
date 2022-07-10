@@ -1,7 +1,11 @@
 import React from 'react';
+
 const BooksContent = ({book}) => {
+    let d = (id) => {
+        console.log(id)
+    }
     return (
-        <div className='p-3 border bg-light BooksContent'>
+        <div key={book.id} onClick={(e) => d(book.id)} className='p-3 border bg-light BooksContent'>
             {book.volumeInfo.imageLinks === undefined ? <img src="" alt=""/> :
                 <img style={{boxShadow: "10px 5px 5px darkgray"}} src={book.volumeInfo.imageLinks.thumbnail}/>}
             <div style={{

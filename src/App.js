@@ -7,7 +7,6 @@ import Books from "./components/Books/Books";
 import ShowMore from "./components/Books/Show-more";
 import FoundResults from "./components/found-results/Found-results";
 function App() {
-let tit = GetBooks.title
     return (
             <div className="App">
             <h1>Поиск книг</h1>
@@ -15,7 +14,7 @@ let tit = GetBooks.title
             <FoundResults/>
             <DropDownList/>
             <DropDownList/>
-            <Books DataTitle={tit}/>
+            <Books />
             <ShowMore/>
         </div>
     );
