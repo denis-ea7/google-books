@@ -1,24 +1,32 @@
+import GetBooks from "../../store/GetBooks";
+import {observer} from "mobx-react";
 const DropDownList = () => {
     const handleChange = (e) => {
-        console.log(e.target.value)
+       GetBooks.filter = e.target.value
+    }
+    const HandleChange = (e)=>{
+        GetBooks.relevance = e.target.value
+        GetBooks.getData(GetBooks.data)
     }
     return (
         <div className='DropDownList'>
             <select onChange={(e) => handleChange(e)} className="btn btn-secondary dropdown-toggle">
-                <option selected>Open this select menu</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+                <option selected>All</option>
+                <option value="Art">Art</option>
+                <option value="Biography">Biography</option>
+                <option value="Computers">computers</option>
+                <option value="history">history</option>
+                <option value="medical">medical</option>
+                <option value="poetry">poetry</option>
             </select>
-            <select className="btn btn-secondary dropdown-toggle" style={{marginLeft: "15px"}}>
-                <option selected>Open this select menu</option>
-                <option value="4">One</option>
-                <option value="5">Two</option>
-                <option value="6">Three</option>
+            <select onChange={(e)=>HandleChange(e)} className="btn btn-secondary dropdown-toggle" style={{marginLeft: "15px"}}>
+                <option selected value='relevance'>Relevance</option>
+                <option value="newest">Newest</option>
+
             </select>
 
         </div>
     );
 };
 
-export default DropDownList;
+export default observer(DropDownList) ;

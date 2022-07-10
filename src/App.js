@@ -9,8 +9,7 @@ import FoundResults from "./components/found-results/Found-results";
 function App() {
 let tit = GetBooks.title
     return (
-        // style={{backgroundImage: `url(${img})` }}
-        <div className="App">
+            <div className="App">
             <h1>Поиск книг</h1>
             <SearchInput/>
             <FoundResults/>
