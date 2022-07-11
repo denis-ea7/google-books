@@ -23,6 +23,7 @@ h1 {
 }
 
 .SearchInput {
+    display: flex;
     grid-area: input;
     width: 50%;
     margin-left: auto;
