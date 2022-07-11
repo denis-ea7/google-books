@@ -125,9 +125,6 @@ h1 {
     .Book{
         display: flex;
         flex-direction: column;
-        
-        min-width: 0em;
-        min-height: 0em;
     }
 }
 
@@ -138,9 +135,6 @@ h1 {
     .Book{
         display: flex;
         flex-direction: column;
-        
-        min-width: 0em;
-        min-height: 0em;
     }
 
     .SearchInput {
@@ -156,10 +150,8 @@ h1 {
         display: flex;
         flex-direction: column;
     }
-    .BookContent > div{
-        min-width: 0em;
-        min-height: 0em;
-    }
+
+
 
     .SearchInput {
         width: 95%;
@@ -175,9 +167,9 @@ h1 {
         flex-direction: column;
     }
     .BookContent > div{
-        min-width: 0em;
-        min-height: 0em;
+        width: 95%;
     }
+
     .SearchInput {
         width: 95%;
     }
@@ -189,16 +181,10 @@ h1 {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
     }
-    .BookContent > div{
-        min-width: 0em;
-        min-height: 0em;
-    }
+
     .Book{
         display: flex;
         flex-direction: column;
-        
-        min-width: 0em;
-        min-height: 0em;
     }
 
     .SearchInput {
@@ -208,6 +194,12 @@ h1 {
     .DropDownList {
         display: flex;
     }
+}
+@media (max-width: 700px) {
+    .BookContent > div{
+        width: 100%;
+    }
+
 }
 
 

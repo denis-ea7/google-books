@@ -15,7 +15,7 @@ const SearchInput = () => {
                        onKeyDown={(e) => input(e)}
                        aria-describedby="search-addon"/>
             </div>
-            <button className='btn' value='btn' onClick={(e)=>input(e)}>Search</button>
+            <button className='btn' style={{border: 'solid 0.5px'}} value='btn' onClick={(e)=>input(e)}>Search</button>
         </div>
     );
 };
