@@ -37,11 +37,20 @@ h1 {
     width: 20%;
 
 }
-.Books {
+@media screen and (max-width: 390px){
+    .Books{
+        grid-area: content;
+        display: grid;
+        background-color: red;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+.Books{
     grid-area: content;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
 }
+
 
 .BooksContent {
     margin: 1rem;
