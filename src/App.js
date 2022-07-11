@@ -7,6 +7,7 @@ import Books from "./components/Books/Books";
 import ShowMore from "./components/Books/Show-more";
 import FoundResults from "./components/found-results/Found-results";
 import Book from "./components/Book/Book";
+import BreadCrumbs from "./components/BreadCrumbs/BreadCrumbs";
 function App() {
     return (
             <div className="App">
@@ -16,7 +17,8 @@ function App() {
             <FoundResults/>
             <DropDownList/>
             <DropDownList/>
-            <Books />
+                <BreadCrumbs/>
+                <Books />
             <ShowMore/>
         </div>
     );

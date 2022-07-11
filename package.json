@@ -7,6 +7,7 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "material-ui-breadcrumbs": "^0.1.6",
     "mobx": "^6.6.1",
     "mobx-react": "^7.5.0",
     "node-sass": "^7.0.1",

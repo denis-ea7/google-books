@@ -34,7 +34,8 @@ h1 {
     grid-area: select;
     text-align: center;
 }
-.DropDownList>select{
+
+.DropDownList > select {
     width: 20%;
 
 }
@@ -50,10 +51,12 @@ h1 {
 .BooksContent > img {
     box-shadow: 10px 5px 5px darkgray;
 }
-.BooksContent>div{
+
+.BooksContent > div {
     margin: 1rem;
 }
-.show-more{
+
+.show-more {
     grid-area: more;
     color: gray;
     text-align: center;
@@ -68,35 +71,40 @@ h1 {
     border: solid;
     display: none;
 }
-.show-more:hover{
+
+.show-more:hover {
     opacity: inherit;
     font-weight: bold;
 }
-.found-results{
+
+.found-results {
     grid-area: found-results;
     font-size: 18px;
     text-align: center;
     display: none;
     color: white;
 }
-.Book{
+
+.Book {
     display: grid;
     grid-column: 1;
     margin: 8rem;
     text-align: center;
 }
 
-.Book>div>img{
+.Book > div > img {
     box-shadow: 10px 5px 5px darkgray;
 }
-.BookContent{
+
+.BookContent {
     display: grid;
     grid-column: 2;
     margin: 2rem;
     grid-row-gap: 3em;
 
 }
-.BookContent>div{
+
+.BookContent > div {
     /*margin: 9rem;*/
     padding: 1rem;
     min-width: 30em;
@@ -108,24 +116,98 @@ h1 {
 
 }
 
-@media screen and (max-width: 400px){
-    .Books{
+.Books {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+@media (max-width: 1250px) {
+    .Book{
+        display: flex;
+        flex-direction: column;
+        
+        min-width: 0em;
+        min-height: 0em;
+    }
+}
+
+@media (max-width: 1100px) {
+    .Books {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .Book{
+        display: flex;
+        flex-direction: column;
+        
+        min-width: 0em;
+        min-height: 0em;
+    }
+
+    .SearchInput {
+        width: 95%;
+    }
+}
+
+@media (max-width: 900px) {
+    .Books {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .Book{
+        display: flex;
+        flex-direction: column;
+    }
+    .BookContent > div{
+        min-width: 0em;
+        min-height: 0em;
+    }
+
+    .SearchInput {
+        width: 95%;
+    }
+}
+
+@media (max-width: 700px) {
+    .Books {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .Book{
+        display: flex;
+        flex-direction: column;
+    }
+    .BookContent > div{
+        min-width: 0em;
+        min-height: 0em;
+    }
+    .SearchInput {
+        width: 95%;
+    }
+}
+
+@media (max-width: 600px) {
+    .Books {
         grid-area: content;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
     }
-    .SearchInput{
+    .BookContent > div{
+        min-width: 0em;
+        min-height: 0em;
+    }
+    .Book{
+        display: flex;
+        flex-direction: column;
+        
+        min-width: 0em;
+        min-height: 0em;
+    }
+
+    .SearchInput {
         width: 95%;
     }
-    .DropDownList{
+
+    .DropDownList {
         display: flex;
     }
 }
-@media (min-width: 500px) {
-    .Books{
-        grid-area: content;
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-    }
-}
+
 
