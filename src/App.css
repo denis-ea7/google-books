@@ -37,19 +37,6 @@ h1 {
     width: 20%;
 
 }
-@media screen and (max-width: 390px){
-    .Books{
-        grid-area: content;
-        display: grid;
-        background-color: red;
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-.Books{
-    grid-area: content;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-}
 
 
 .BooksContent {
@@ -118,5 +105,26 @@ h1 {
     word-wrap: break-word;
     font-size: x-large;
 
+}
+
+@media screen and (max-width: 400px){
+    .Books{
+        grid-area: content;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .SearchInput{
+        width: 95%;
+    }
+    .DropDownList{
+        display: flex;
+    }
+}
+@media (min-width: 500px) {
+    .Books{
+        grid-area: content;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
 }
 
