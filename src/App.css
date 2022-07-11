@@ -8,6 +8,7 @@
                         'input'
                         'select'
                         'found-results'
+                        /*'Book'*/
                         'content'
                         'more';
 }
@@ -31,10 +32,10 @@ h1 {
 .DropDownList {
     grid-area: select;
     text-align: center;
-    /*opacity: 0.4;*/
 }
 .DropDownList>select{
     width: 20%;
+
 }
 .Books {
     grid-area: content;
@@ -80,5 +81,33 @@ h1 {
     text-align: center;
     display: none;
     color: white;
+}
+.Book{
+    display: grid;
+    grid-column: 1;
+    margin: 8rem;
+    text-align: center;
+}
+
+.Book>div>img{
+    box-shadow: 10px 5px 5px darkgray;
+}
+.BookContent{
+    display: grid;
+    grid-column: 2;
+    margin: 2rem;
+    grid-row-gap: 3em;
+
+}
+.BookContent>div{
+    /*margin: 9rem;*/
+    padding: 1rem;
+    min-width: 30em;
+    min-height: 20em;
+    border: solid 0.5px gray;
+    text-align: left;
+    word-wrap: break-word;
+    font-size: x-large;
+
 }
 

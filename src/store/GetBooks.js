@@ -11,6 +11,7 @@ class GetBooks {
     showMore = false
     filter = ''
     relevance = 'relevance'
+    small = null
 
     constructor() {
         configure({
@@ -21,7 +22,8 @@ class GetBooks {
             title: observable,
             startIndex: observable,
             filter:observable,
-            relevance:observable
+            relevance:observable,
+            small:observable
         })
     }
     relevanceMethod(res){
@@ -29,7 +31,14 @@ class GetBooks {
         this.title = res.data.items
         this.showMore = true
     }
-    getBook(){
+    getBook(id){
+        axios.get(`https://www.googleapis.com/books/v1/volumes/${id}`)
+            .then((res)=>{
+                this.title = []
+                this.small  = res.data
+                this.showMore = false
+                // console.log(this.small)
+            })
 
     }
 
@@ -43,9 +52,9 @@ class GetBooks {
             &startIndex=${this.startIndex}&orderBy=${this.relevance}&maxResults=30&
                 key=AIzaSyCJs7EPRmqH2mKVKO31t2NcYnHmkLVfjmA`)
             .then((res) => {
+                this.small = null
                 this.data = data
                 if (this.title.length === 0) {
-                    console.log(res.data.items[6].id)
                     this.relevanceMethod(res)
                 } else {
                     if (res.data.items.length > 28) {

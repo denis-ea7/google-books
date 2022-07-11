@@ -10,6 +10,7 @@ const DropDownList = () => {
     }
     return (
         <div className='DropDownList'>
+           <span style={{paddingRight: '1em'}}>Categories</span>
             <select onChange={(e) => handleChange(e)} className="btn btn-secondary dropdown-toggle">
                 <option selected>All</option>
                 <option value="Art">Art</option>
@@ -19,6 +20,8 @@ const DropDownList = () => {
                 <option value="medical">medical</option>
                 <option value="poetry">poetry</option>
             </select>
+            <span style={{paddingLeft:'2em'}}>Sorting by</span>
+
             <select onChange={(e)=>HandleChange(e)} className="btn btn-secondary dropdown-toggle" style={{marginLeft: "15px"}}>
                 <option selected value='relevance'>Relevance</option>
                 <option value="newest">Newest</option>
